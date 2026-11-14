@@ -1,0 +1,34 @@
+﻿<Window x:Class="CapaPresentacion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sistema de Ventas" Height="450" Width="750"
+        WindowStartupLocation="CenterScreen">
+
+    <DockPanel>
+        <!-- MENÚ SUPERIOR -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Archivo">
+                <MenuItem Header="_Salir" Click="Salir_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Mantenimiento">
+                <MenuItem Header="_Productos" Click="Productos_Click"/>
+            </MenuItem>
+            <MenuItem Header="A_yuda">
+                <MenuItem Header="_Acerca de" Click="AcercaDe_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- BARRA DE ESTADO -->
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock x:Name="txtEstado" Text="Listo"/>
+        </StatusBar>
+
+        <!-- CENTRO -->
+        <Grid Background="#F3F6FA">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Sistema de Ventas" FontSize="32" FontWeight="Bold" Foreground="#1F4E79" HorizontalAlignment="Center"/>
+                <TextBlock Text="Elige una opción del menú Mantenimiento" FontSize="14" Foreground="Gray" HorizontalAlignment="Center" Margin="0,8,0,0"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>
